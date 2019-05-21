@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>ToDo Lists</h1>
+<a href="/add"> Add TODO Lists</a> <br/>
+<div th:each="todo :${todos}">
+
+    <h4 th:inline="text">[[${todo.id}]] . [[${todo.taskName}]] Due Date is = [[${todo.dueDate}]], if possible = [[${todo.priority}]]
+
+    </h4>
+
+</div>
+</body>
+</html>
